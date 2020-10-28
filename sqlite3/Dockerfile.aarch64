@@ -1,0 +1,5 @@
+FROM node:12-alpine3.12
+RUN apk add --no-cache python3 make musl-dev g++
+ADD package.json .
+RUN ln -s /usr/bin/python3 /usr/bin/python
+RUN npm install
